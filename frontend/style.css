@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(245, 246, 246);
+  }
+  h1{
+    text-align: center;
+  }
+  table,
+  td {
+    border: 1px solid black;
+  }
+  table {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+  }
+  main {
+    width: 80%;
+    margin: auto;
+  }
+  .valid {
+    color: green;
+  }
+  .invalid {
+    color: red;
+  }
+  
+  
