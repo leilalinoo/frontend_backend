@@ -9,17 +9,17 @@ class Controller {
     this.dataservice = new DataService();
 
     this.dataservice.getAxiosData(ALAPVEGPONT, this.adatokMegj, this.hibaMegj);
-   /*  this.dataservice.postAxiosData(ALAPVEGPONT, {
-      nev: "talan mosst",
-      szul: 1334,
-    });*/
+     this.dataservice.postAxiosData(ALAPVEGPONT, {
+      nev: "azt hiszem feladom",
+      szul: 2022,
+    });
    /*this.dataservice.putAxiosData(ALAPVEGPONT, {
       id: 5,
       nev: "joey",
       szul: 1111,
     });*/
 
-   // this.dataservice.deleteAxiosData(ALAPVEGPONT, 14)
+    
 
     this.adatleiro = new AdatModel();
     console.log("wwwwwwwwwwwwwwwwwww",this.adatleiro.leiro);
@@ -29,7 +29,8 @@ class Controller {
       console.log(event.detail);
     });
     $(window).on("torles", (event) => {
-      console.log(event.detail);
+      console.log(event.detail.index);
+    //  this.dataservice.deleteAxiosData(ALAPVEGPONT, event.detail.index)
     });
     $(window).on("megse", (event) => {
       console.log(event.detail);
