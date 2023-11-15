@@ -3,28 +3,28 @@ class DataService {
     axios.defaults.baseURL = "http://localhost:8000/";
   }
   getAxiosData(url, callback, hibaCallback) {
-    console.log(url);
+    //console.log(url);
     axios
       .get(url)
       .then(function (response) {
         // handle success
-        console.log("Valasz objektum", response);
+      /*  console.log("Valasz objektum", response);
         console.log("adatok", response.data);
         console.log("statusz", response.status);
         console.log("Statusz szoveg", response.statusText);
         console.log("Valasz fejlec", response.headers);
-        console.log("Valasz config", response.config);
-        callback(response.data.nevek);
+        console.log("Valasz config", response.config);*/
+        callback(response.data);
       })
       .catch(function (error) {
         // handle error
 
         hibaCallback(error);
       })
-      .finally(function () {
+     /* .finally(function () {
         // always executed
         console.log("finally");
-      });
+      });*/
 
     /*         let xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost/path/cors.php", true); // Az URL-t módosítsd a cors.php fájl helyére
@@ -52,8 +52,8 @@ xhr.send(); */
   }
 
   putAxiosData(url, data) {
-    console.log("PUUUUUUUUUUUT::::::", data);
-    console.log(`${url}/${data.id}`);
+    //console.log("PUUUUUUUUUUUT::::::", data);
+    //console.log(`${url}/${data.id}`);
     axios
       .put(`${url}/${data.id}`, data)
       .then((response) => {
