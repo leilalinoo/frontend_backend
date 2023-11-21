@@ -9,27 +9,29 @@ class Controller {
     this.dataservice = new DataService();
 
     this.dataservice.getAxiosData(ALAPVEGPONT, this.adatokMegj, this.hibaMegj);
- /*   this.dataservice.postAxiosData(ALAPVEGPONT, {
-      nev: "Valaki",
-      szul: 1589,
-    });*/
-    this.dataservice.putAxiosData(ALAPVEGPONT, {
-      id: 10,
-      nev: "Nikiiiiiiiiiiiiiiiiiiiiiiiii",
-      szul: 2222,
+     this.dataservice.postAxiosData(ALAPVEGPONT, {
+      nev: "azt hiszem feladom",
+      szul: 2022,
     });
+   /*this.dataservice.putAxiosData(ALAPVEGPONT, {
+      id: 5,
+      nev: "joey",
+      szul: 1111,
+    });*/
 
-    this.dataservice.deleteAxiosData(ALAPVEGPONT, 14)
+    
 
     this.adatleiro = new AdatModel();
     console.log("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",this.adatleiro.leiro);
+
 
     this.UrlapView = new UrlapView($(".urlap"), this.adatleiro.leiro);
     $(window).on("katt", (event) => {
       console.log(event.detail);
     });
     $(window).on("torles", (event) => {
-      console.log(event.detail);
+      console.log(event.detail.index);
+    //  this.dataservice.deleteAxiosData(ALAPVEGPONT, event.detail.index)
     });
     $(window).on("megse", (event) => {
       console.log(event.detail);
@@ -41,7 +43,7 @@ class Controller {
   adatokMegj(lista) {
     // console.log(lista)
     //console.log(leiro);
-    new AdatView(lista, $(".lista"));
+    new AdatView(lista, $(".lista"), /*this.adatleiro.leiro*/);
   }
   hibaMegj(error) {
     console.log(error);

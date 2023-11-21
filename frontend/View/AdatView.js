@@ -5,8 +5,9 @@ class AdatView {
   constructor(lista, szuloElem,leiro) {
     this.#lista = lista;
     this.#leiro = leiro;
-    szuloElem.append(`<table class= table table-danger table-hover >`);
-    this.tablaElem = szuloElem.children("table");
+    szuloElem.append(`<table class= table table-danger table-hover ><tbody>`);
+    this.tablaElem = szuloElem.find("tbody");
+    console.log(leiro)
     this.megjelenit();
   }
   megjelenit() {
