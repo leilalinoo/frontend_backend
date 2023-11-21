@@ -3,7 +3,7 @@ class DataService {
     axios.defaults.baseURL = "http://localhost:8000/";
   }
   getAxiosData(url, callback, hibaCallback) {
-    console.log(url);
+    //console.log(url);
     axios
       .get(url)
       .then(function (response) {
@@ -23,7 +23,7 @@ class DataService {
       })
       .finally(function () {
         // always executed
-        console.log("finally");
+        //console.log("finally");
       });
 
     /*         let xhr = new XMLHttpRequest();
@@ -52,8 +52,8 @@ xhr.send(); */
   }
 
   putAxiosData(url, data) {
-    console.log("PUUUUUUUUUUUT::::::", data);
-    console.log(`${url}/${data.id}`);
+    //console.log("PUUUUUUUUUUUT::::::", data);
+    //console.log(`${url}/${data.id}`);
     axios
       .put(`${url}/${data.id}`, data)
       .then((response) => {
@@ -65,7 +65,7 @@ xhr.send(); */
   }
 
   deleteAxiosData(url, id) {
-    console.log(`DELEEEEEEEEEEEEEETE :::::::::::::::::${url}/${id}`);
+    //console.log(`DELEEEEEEEEEEEEEETE :::::::::::::::::${url}/${id}`);
     axios
       .delete(`${url}/${id}`)
       .then((response) => {

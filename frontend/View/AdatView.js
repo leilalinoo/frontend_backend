@@ -7,7 +7,6 @@ class AdatView {
     this.#leiro = leiro;
     szuloElem.append(`<table class= table table-danger table-hover >`);
     this.tablaElem = szuloElem.children("table");
-    console.log(leiro)
     this.megjelenit();
   }
   megjelenit() {

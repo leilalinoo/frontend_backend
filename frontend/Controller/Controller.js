@@ -22,7 +22,7 @@ class Controller {
     this.dataservice.deleteAxiosData(ALAPVEGPONT, 14)
 
     this.adatleiro = new AdatModel();
-    console.log(this.adatleiro.leiro);
+    console.log("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",this.adatleiro.leiro);
 
     this.UrlapView = new UrlapView($(".urlap"), this.adatleiro.leiro);
     $(window).on("katt", (event) => {
