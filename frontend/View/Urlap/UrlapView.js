@@ -28,6 +28,7 @@ class UrlapView {
           this.#urlapAdatok[kulcs] = ertek;
           console.log(this.#urlapAdatok);
           this.#esemenyTrigger("katt");
+
         });
         //console.log("valid az urlap");
       } else {
@@ -60,8 +61,9 @@ class UrlapView {
     txt = `<input type="submit" id = "submit" value="hoooowww yeaaaaahhhh ~~" >`;
     this.formElem.append(txt);
   }
+
   #esemenyTrigger(esemenynev) {
-    const esemenyem = new CustomEvent(esemenynev, { detail: this });
+    const esemenyem = new CustomEvent(esemenynev, { detail: this.#urlapAdatok });
     window.dispatchEvent(esemenyem);
   }
 }

@@ -8,7 +8,7 @@ class NumberUrlapElem {
       this.#elemLeiro = elemLeiro;
       this.formElem = szulElem;
       this.#numberElem();
-      console.log(key)
+      //console.log(key)
       this.InputElem = $(`#${this.#key}`);
      // console.log(this.InputElem);
       this.validElem = this.formElem

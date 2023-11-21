@@ -16,7 +16,13 @@ export const urlapleiro = {
     max: 2023,
     valid: "1000 és 2023 közötti számot várunk",
   },
+  letrehozva: {
+    megj: "Létrehozva",
+  },
+  modositva: {
+    megj: "Módosítva",
+  },
   gombok: {
-    megj: "Gombok",
+    megj: "Műveletek",
   },
 };

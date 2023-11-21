@@ -18,8 +18,11 @@ main {
   margin: auto;
 }
 .valid {
-  color: green;
+  color: green;  
 }
 .invalid {
   color: red;
+}
+.my-custom-background {
+  background-color: lightgreen !important;
 }

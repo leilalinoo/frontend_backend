@@ -14,20 +14,22 @@ class TablazatSor {
     //console.log(this.pipa)
     this.pipa.on("click", () => {
       //console.log(this)
-      this.sorElem.css("background-color", "lightgreen");
+      this.sorElem.css("background-color", "lightgreen !important");
+     //this.sorElem.addClass('my-custom-background');
+     //this.sorElem.attr('style', 'background-color: lightgreen !important');
       this.megse.show();
       this.pipa.hide();
       this.#esemenyTrigger("kesz");
     });
 
     this.torol.on("click", () => {
-      // console.log(this)
+       console.log(this)
       this.sorElem.remove();
       this.#esemenyTrigger("torles");
     });
 
     this.megse.on("click", () => {
-      this.sorElem.css("background-color", "rgb(245, 246, 246)");
+      this.sorElem.css("background-color", "rgb(245, 246, 246) !important");
       //console.log(this)
       this.megse.hide();
       this.pipa.show();
@@ -36,24 +38,24 @@ class TablazatSor {
   }
   #sor() {
     let txt = "";
-    txt += "<tbody>";
     txt += "<tr>";
     for (const key in this.#adat) {
       const element = this.#adat[key];
       txt += `<td>${element}</td>`;
     }
-    txt += `<td><span  class="torol" >🗑️</span>
-      <span   class="kesz">✅</span> 
-      <span   class="megse" >❌</span> </td>`;
+    txt += `<td>
+              <span  class="torol" >🗑️</span>
+              <span   class="kesz">✅</span> 
+              <span   class="megse" >❌</span> 
+            </td>`;
     txt += `</tr>`;
-    txt += "</tbody>";
 
     this.tablaElem.append(txt);
   }
   #esemenyTrigger(esemenynev) {
     const esemenyem = new CustomEvent(esemenynev, {
       detail: {
-        index: this.index,
+        id: this.#adat.id,
         sorElem: this.sorElem,
       },
     });
